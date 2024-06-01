@@ -10,14 +10,24 @@
 <body>
     <header>
         <div class="slide-container">
-            <input type="range" min="16" max="100" class="slider" id="myRange">
+            <label for="name">Choose a Grid Size:</label>
+            <p id="rangeValue"></p>
+            <input type="range" value="16" min="16" max="100" id="slider" oninput="rangeValue.innerText = this.value">
+            <input type="submit" value="SUBMIT" id="submit-btn">
         </div>
+        <div class="color-picker-container">
+            <label for="color-picker">Choose a Color:</label>
+            <input type="color" id="color-picker" name="color-picker">
+        </div>
+    </header>
+    <div id="container"></div>
+    <footer>
         <div class="button-container">
             <button id="clear-btn">CLEAR CANVAS</button>
             <button id="eraser-btn">ERASER</button>
+            <button id="single-btn">SINGLE COLOR</button>
             <button id="rainbow-btn">RAINBOW</button>
-        </div> 
-    </header>
-    <div class="container"></div>
+        </div>
+    </footer>
 </body>
 </html>
